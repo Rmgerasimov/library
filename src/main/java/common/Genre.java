@@ -1,10 +1,9 @@
-package models.enums;
+package common;
 
 public enum Genre {
 
     HISTORICAL,
     COMEDY,
     AUTOBIOGRAPHY
-
 
 }

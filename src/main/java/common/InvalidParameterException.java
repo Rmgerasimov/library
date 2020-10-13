@@ -1,4 +1,4 @@
-package exceptions;
+package common;
 
 /**
  * Thrown when a user enter a wrong input. These include:

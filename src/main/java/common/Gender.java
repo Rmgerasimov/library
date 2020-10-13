@@ -1,4 +1,4 @@
-package models.enums;
+package common;
 
 public enum Gender {
 

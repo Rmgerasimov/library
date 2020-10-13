@@ -1,9 +1,10 @@
 package models.books;
 
-import models.enums.Genre;
+import common.Genre;
 import models.people.Author;
 
-import static exceptions.ExceptionMessages.INVALID_TOTAL_COPIES;
+import static common.ExceptionMessages.INVALID_TOTAL_COPIES;
+import static common.Validation.isValidInteger;
 
 public class PaperBook extends Book {
 

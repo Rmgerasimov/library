@@ -1,9 +1,9 @@
 package models.books;
 
-import exceptions.InvalidParameterException;
+import common.InvalidParameterException;
 import org.junit.jupiter.api.Test;
 
-import static models.enums.Genre.HISTORICAL;
+import static common.Genre.HISTORICAL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 

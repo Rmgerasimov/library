@@ -1,18 +1,24 @@
 package models.people;
 
-import models.enums.Gender;
+import common.Gender;
 
 import java.time.LocalDate;
 
+import static common.ExceptionMessages.INVALID_BIRTHDAY_DATE;
+import static common.Validation.checkForCorrectDate;
+
 public class Author extends Person {
 
-    private LocalDate birthday;
+    private final LocalDate birthday;
     private LocalDate deathDay;
 
     public Author(String firstName, String lastName, Gender gender, String country,
-                  int year, int month, int day,
-                  int deathYear, int deathMonth, int deathDay) {
+                  int birthYear, int birthMonth, int birthDay, int deathYear, int deathMonth, int deathDay) {
         super(firstName, lastName, gender, country);
-        birthday = LocalDate.of(year, month, day);
+
+        checkForCorrectDate(birthYear, birthMonth, birthDay, INVALID_BIRTHDAY_DATE);
+        birthday = LocalDate.of(birthYear, birthMonth, birthDay);
+
+        // todo do something with death...
     }
 }

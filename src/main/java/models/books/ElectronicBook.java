@@ -1,9 +1,10 @@
 package models.books;
 
-import models.enums.Genre;
+import common.Genre;
 import models.people.Author;
 
-import static exceptions.ExceptionMessages.INVALID_LINK;
+import static common.ExceptionMessages.INVALID_LINK;
+import static common.Validation.isValidString;
 
 public class ElectronicBook extends Book {
 
@@ -25,6 +26,4 @@ public class ElectronicBook extends Book {
     public String getDownloadLink() {
         return downloadLink;
     }
-
-
 }

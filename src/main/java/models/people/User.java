@@ -1,6 +1,11 @@
 package models.people;
 
-import models.enums.Gender;
+import common.Gender;
+
+import static common.ExceptionMessages.INVALID_AGE;
+import static common.ExceptionMessages.INVALID_PHONE_NUMBER;
+import static common.Validation.isValidInteger;
+import static common.Validation.isValidString;
 
 public class User extends Person {
 
@@ -9,8 +14,10 @@ public class User extends Person {
 
     public User(String firstName, String lastName, Gender gender, String country, int age, String phoneNumber) {
         super(firstName, lastName, gender, country);
+
+        isValidInteger(age, INVALID_AGE);
+        isValidString(phoneNumber, INVALID_PHONE_NUMBER);
         this.age = age;
         this.phoneNumber = phoneNumber;
     }
-
 }

@@ -1,14 +1,14 @@
 package models.books;
 
-import exceptions.InvalidParameterException;
-import models.enums.Genre;
+import common.Genre;
 import models.people.Author;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static exceptions.ExceptionMessages.*;
+import static common.ExceptionMessages.*;
+import static common.Validation.*;
 
 public abstract class Book {
 
@@ -38,25 +38,7 @@ public abstract class Book {
         isValidString(summary, INVALID_BOOK_SUMMARY);
         isValidString(isbn, INVALID_BOOK_ISBN);
         isValidInteger(pages, INVALID_PAGES);
-
-        if (genre == null) {
-            throw new InvalidParameterException(INVALID_GENRE);
-        }
-
-        if (year <= 0 || year > 2020) {
-            throw new InvalidParameterException(INVALID_BOOK_YEAR);
-        }
-    }
-
-    protected void isValidString(String check, String message) {
-        if (check == null || check.trim().isEmpty()) {
-            throw new InvalidParameterException(message);
-        }
-    }
-
-    protected void isValidInteger(int check, String message) {
-        if (check <= 0) {
-            throw new InvalidParameterException(message);
-        }
+        checkEnumForNull(genre, INVALID_GENRE);
+        checkForValidYear(year, INVALID_BOOK_YEAR);
     }
 }
