@@ -14,12 +14,6 @@ public class Validation {
         }
     }
 
-    public static void checkEnumForNull(Enum<?> check, String message) {
-        if (check == null) {
-            throw new InvalidParameterException(message);
-        }
-    }
-
     public static void checkForValidYear(int year, String message) {
         if (year <= 0 || year > 2020) {
             throw new InvalidParameterException(message);

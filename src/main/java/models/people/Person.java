@@ -11,4 +11,12 @@ public abstract class Person {
         this.lastName = lastName;
         this.country = country;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
 }

@@ -3,8 +3,12 @@ package enums;
 public enum BookGenre {
 
     ROMAN,
-    HISTORICAL,
+    HISTORY,
     COMEDY,
     AUTOBIOGRAPHY,
+    HORROR,
+    MYSTERY,
+    THRILLER,
+    SCIENCE
 
 }

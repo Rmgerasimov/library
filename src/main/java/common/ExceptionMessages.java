@@ -40,4 +40,6 @@ public class ExceptionMessages {
 
     public static final String INVALID_PASSWORD = "Password cannot be null or empty!";
 
+    public static final String INVALID_AUTHOR = "Author cannot be null or empty!";
+
 }
