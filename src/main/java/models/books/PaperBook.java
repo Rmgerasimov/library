@@ -1,6 +1,6 @@
 package models.books;
 
-import common.Genre;
+import enums.BookGenre;
 import models.people.Author;
 
 import static common.ExceptionMessages.INVALID_TOTAL_COPIES;
@@ -11,10 +11,10 @@ public class PaperBook extends Book {
     private int totalCopies;
     private int availableCopies;
 
-    public PaperBook(String title, Genre genre, String summary, String isbn,
+    public PaperBook(String title, BookGenre bookGenre, String summary, String isbn,
                      int pages, int yearOfPublication, int totalCopies, Author... authors) {
 
-        super(title, genre, summary, isbn, pages, yearOfPublication, authors);
+        super(title, bookGenre, summary, isbn, pages, yearOfPublication, authors);
 
         isValidInteger(totalCopies, INVALID_TOTAL_COPIES);
         this.totalCopies = totalCopies;

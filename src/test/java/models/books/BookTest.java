@@ -3,7 +3,7 @@ package models.books;
 import common.InvalidParameterException;
 import org.junit.jupiter.api.Test;
 
-import static common.Genre.HISTORICAL;
+import static enums.BookGenre.HISTORICAL;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {

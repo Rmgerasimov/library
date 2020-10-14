@@ -30,5 +30,14 @@ public class ExceptionMessages {
 
     public static final String INVALID_AGE = "Age cannot be zero or lower!";
 
-    public static final String INVALID_PHONE_NUMBER = "Phone number cannot be null or empty!";
+    public static final String INVALID_CITY = "City cannot be null or empty!";
+
+    public static final String INVALID_ADDRESS = "Address cannot be null or empty!";
+
+    public static final String INVALID_EMAIL = "Email cannot be null or empty!";
+
+    public static final String INVALID_USERNAME = "Username cannot be null or empty!";
+
+    public static final String INVALID_PASSWORD = "Password cannot be null or empty!";
+
 }

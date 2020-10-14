@@ -1,23 +1,23 @@
 package models.people;
 
-import common.Gender;
-
-import static common.ExceptionMessages.INVALID_AGE;
-import static common.ExceptionMessages.INVALID_PHONE_NUMBER;
-import static common.Validation.isValidInteger;
-import static common.Validation.isValidString;
+import enums.Gender;
 
 public class User extends Person {
 
+    private String city;
+    private String address;
+    private String email;
+    private Gender gender;
     private int age;
-    private String phoneNumber;
 
-    public User(String firstName, String lastName, Gender gender, String country, int age, String phoneNumber) {
-        super(firstName, lastName, gender, country);
+    public User(String firstName, String lastName, String country, String city,
+                String address, String email, Gender gender, int age) {
 
-        isValidInteger(age, INVALID_AGE);
-        isValidString(phoneNumber, INVALID_PHONE_NUMBER);
+        super(firstName, lastName, country);
+        this.city = city;
+        this.address = address;
+        this.email = email;
         this.age = age;
-        this.phoneNumber = phoneNumber;
+        this.gender = gender;
     }
 }

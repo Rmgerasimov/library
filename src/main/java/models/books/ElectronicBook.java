@@ -1,6 +1,6 @@
 package models.books;
 
-import common.Genre;
+import enums.BookGenre;
 import models.people.Author;
 
 import static common.ExceptionMessages.INVALID_LINK;
@@ -11,9 +11,9 @@ public class ElectronicBook extends Book {
     private String readLink;
     private String downloadLink = "There is no link for downloading!";
 
-    public ElectronicBook(String title, Genre genre, String summary, String isbn,
+    public ElectronicBook(String title, BookGenre bookGenre, String summary, String isbn,
                           int pages, int yearOfPublication, String readLink, String downloadLink, Author... authors) {
-        super(title, genre, summary, isbn, pages, yearOfPublication, authors);
+        super(title, bookGenre, summary, isbn, pages, yearOfPublication, authors);
 
         isValidString(readLink, INVALID_LINK);
         this.readLink = readLink;
