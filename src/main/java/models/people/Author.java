@@ -1,12 +1,17 @@
 package models.people;
 
+import models.books.Book;
+
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import static common.ExceptionMessages.INVALID_BIRTHDAY_DATE;
 import static common.Validation.checkForCorrectDate;
 
 public class Author extends Person {
 
+    private List<Book> books = new ArrayList<>();
     private final LocalDate birthday;
     private LocalDate deathDay;
 
@@ -17,6 +22,6 @@ public class Author extends Person {
         checkForCorrectDate(birthYear, birthMonth, birthDay, INVALID_BIRTHDAY_DATE);
         birthday = LocalDate.of(birthYear, birthMonth, birthDay);
 
-        // todo do something with death...
+        // todo -> do something with death...
     }
 }

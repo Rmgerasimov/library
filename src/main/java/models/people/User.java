@@ -1,9 +1,11 @@
 package models.people;
 
 import enums.Gender;
+import models.History;
 
 public class User extends Person {
 
+    private History history = new History();
     private String city;
     private String address;
     private String email;

@@ -19,9 +19,8 @@ public class Controller {
     private Scanner scanner = new Scanner(System.in);
 
 
-    public void signIn(String username, String password) {
-
-
+    public User signIn(String username, String password) {
+        return userRepository.getUser(username, password);
     }
 
     public void createAccount(String firstName, String lastName, String country, String city, String address,

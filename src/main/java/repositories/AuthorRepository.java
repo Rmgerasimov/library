@@ -9,10 +9,5 @@ public class AuthorRepository {
 
     private Collection<Author> authors = new ArrayList<>();
 
-    /*public Collection<Author> getAuthors() {
-        return Collections.unmodifiableCollection(authors);
-    }*/
-
-
 
 }
