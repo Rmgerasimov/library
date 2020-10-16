@@ -1,4 +1,4 @@
-package enums;
+package models.books;
 
 public enum BookGenre {
 

@@ -1,29 +1,21 @@
 package models.books;
 
-import enums.BookGenre;
 import models.people.Author;
 
-import static common.ExceptionMessages.INVALID_LINK;
-import static common.Validation.isValidString;
+import java.util.List;
+
+import static validation.GeneralValidation.isValidString;
 
 public class ElectronicBook extends Book {
+    protected static final String INVALID_LINK = "The link cannot be null or empty!";
 
     private String readLink;
-    private String downloadLink = "There is no link for downloading!";
 
     public ElectronicBook(String title, BookGenre bookGenre, String summary, String isbn,
-                          int pages, int yearOfPublication, String readLink, String downloadLink, Author... authors) {
+                          int pages, int yearOfPublication, String readLink, List<Author> authors) {
         super(title, bookGenre, summary, isbn, pages, yearOfPublication, authors);
 
         isValidString(readLink, INVALID_LINK);
         this.readLink = readLink;
-
-        if (downloadLink != null && !downloadLink.trim().isEmpty()) {
-            this.downloadLink = downloadLink;
-        }
-    }
-
-    public String getDownloadLink() {
-        return downloadLink;
     }
 }
